@@ -7,7 +7,7 @@ The project was conducted by **Group 3**: Beatrice Citterio, Irene Colombo, Giov
   * [Motivation](#motivation)
   * [The Research Question](#the-research-question)
   * [Materials](#materials)
-* [How To Read the Project](#how-to-read-the-project)
+* [How To Read the Project (!)](#how-to-read-the-project)
   * [Why Such a Structure?](#why-such-a-structure)
 
 ## Introduction
