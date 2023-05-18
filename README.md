@@ -53,8 +53,8 @@ All the techniques and choices are carefully motivated and explained in (i) and 
 
 - ```01-DropSeq``` folder:
 
-  5. ```HCC1806_dropseq_train.ipynb```: EDA and training for the HCC1806 cell line.
-  6. ```MCF7_dropseq_train.ipynb```: same as (v), but MCF7 cell line.
+  5. ```HCC1806_dropseq.ipynb```: EDA and training for the HCC1806 cell line.
+  6. ```MCF7_dropseq.ipynb```: same as (v), but MCF7 cell line.
 
 The ```additional-data``` folder contains data and pictures used during the project.
 
