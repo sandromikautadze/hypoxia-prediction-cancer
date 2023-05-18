@@ -25,7 +25,7 @@ In particular, our goal is to predict hypoxia or normoxia status from single-can
 ### Materials
 In order to answer this question, we will work in a simplified environment. In particular, we have at our disposal single-cancer-cell RNA-sequencing (scRNA-seq) data coming from breast cancer. The cells that we are going to analyze were derived originally from tumors of female patients, and then they were grown in two cultures: MCF7 and HCC1806. The culture corresponding to the cell line MCF7 was given estrogen, while the one corresponding to HCC1806 was given other growth factors. We are assuming that the cell lines that we obtain are a good representation of the tumor cells.
 
-The samples in the cell line correspond to cells and the features of sequenced genes. We will be working with two given types of processing techniques: SmartSeq and DropSeq. For each technique and for each cell we have the following data:
+The samples in the cell line correspond to cells and the features of sequenced genes. We will be working with two given types of sequencing techniques: SmartSeq and DropSeq. For each technique and for each cell we have the following data:
 - SmartSeq for MCF7 and HCC1806:
   - Metadata, with information about the samples
   - Unfiltered data, so the actual sequencing data, with no filter nor normalization.
@@ -60,4 +60,4 @@ We stress once again the importance of reading the files in the order presented 
 ### Why Such a Structure?
 On the one hand, we understand that structuring the project with this format might slow down the process of reading, understanding, and grading all at once. On the other, we believe that it's the setup that gives the most credit to our work, as we have put a lot of effort into doing the best work we could, despite the time and domain-knowledge constraints, while keeping the comments short enough as to be both well descriptive and not excessively long.
 
-In addition, notice that we decided not to perform the training on the processed data from the unfiltered files, but the only learning that we did was on the given training set. This was made to avoid lengthening the project, even though we have to reveal that it would have been great to compare the results for the given data to those we personally processed.
+In addition, notice that we decided not to perform the training on the processed data from the unfiltered files, but the only learning that we did was on the given training set. This was made to avoid lengthening the project and to keep the results consistent for both sequencing techniques.
