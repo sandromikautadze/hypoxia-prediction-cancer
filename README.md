@@ -38,7 +38,7 @@ In addition, there's also a test set, for each colture and for each technique, t
 ## How To Read the Project
 Here we are going to summarize the order in which the files must be read in order to understand our choices, thus **read this section carefully**. What follows is the exact file name order, with a brief explanation of the content:
 
-- ```00.SmartSeq``` folder:
+- ```00-SmartSeq``` folder:
 
   1. ```HCC1806_unfiltered.ipynb```: it contains the exploratory data analysis, data preprocessing, and unsupervised learning of the unfiltered data of the HCC1806 cell line.
 
@@ -50,7 +50,7 @@ Here we are going to summarize the order in which the files must be read in orde
 
 All the techniques and choices are carefully motivated and explained in (i) and (ii). Therefore, for the MCF7 cell line, we kept our comments much more compact, without explaining once again our decisions.
 
-- ```01.DropSeq``` folder:
+- ```01-DropSeq``` folder:
 
   5. ```HCC1806_dropseq_train.ipynb```: EDA and training for the HCC1806 cell line.
   6. ```MCF7_dropseq_train.ipynb```: same as (v), but MCF7 cell line.
