@@ -9,6 +9,7 @@ The project was conducted by **Group 3**: Beatrice Citterio, Irene Colombo, Giov
   * [Materials](#materials)
 * [How To Read the Project (!)](#how-to-read-the-project)
   * [Why Such a Structure?](#why-such-a-structure)
+* [Brief Comments on the Results](#brief-comments-on-the-results)
 
 ## Introduction
 
@@ -55,9 +56,31 @@ All the techniques and choices are carefully motivated and explained in (i) and 
   5. ```HCC1806_dropseq_train.ipynb```: EDA and training for the HCC1806 cell line.
   6. ```MCF7_dropseq_train.ipynb```: same as (v), but MCF7 cell line.
 
+The ```additional-data``` folder contains data and pictures used during the project.
+
+The original data used for the project are private and will not be published.
+
 We stress once again the importance of reading the files in the order presented above. Not doing so will very likely result in a big confusion for the reader.
 
 ### Why Such a Structure?
-On the one hand, we understand that structuring the project with this format might slow down the process of reading, understanding, and grading all at once. On the other, we believe that it's the setup that gives the most credit to our work, as we have put a lot of effort into doing the best work we could, despite the time and domain-knowledge constraints, while keeping the comments short enough as to be both well descriptive and not excessively long.
+On the one hand, we understand that structuring the project with this format might slow down the process of reading and understanding all at once. On the other, we believe that it's the setup that gives the most credit to our work, as we have put a lot of effort into doing the best work we could, despite the time and domain-knowledge constraints, while keeping the comments short enough as to be both well descriptive and not excessively long.
 
 In addition, notice that we decided not to perform the training on the processed data from the unfiltered files, but the only learning that we did was on the given training set. This was made to avoid lengthening the project and to keep the results consistent for both sequencing techniques.
+
+## Brief Comments on the Results
+
+Before reading this, we advise you to see the rest of the project first. 
+
+First of all, let's compare the cell lines. In general, after analyzing and training all our datasets, we can conclude that supervised training gives us better performances than unsupervised methods.
+
+For SmartSeq, we see that the methods that behave best for HCC1806 are the Random Forest (98.9% accuracy) and Logistic Regression (98.4% accuracy), and for MCF7 are Logistic Regression (100% accuracy) and Linear SVM (100% accuracy). Overall, we see that the classification on MCF7 has higher accuracy with all methods. This could be due to the fact that it is a bigger dataset, it is more balanced between hypoxic and normoxic cells, and also because it is less sparse.
+
+Now, if we compare the features that we have found to be more relevant in both the cell lines (76 for MCF7 and 98 for HCC1806), we get that we don't find much similarity for the genes per se (i.e. only 16 genes are shared). However, when doing pathway analysis, we see that both glycolysis, hypoxia, and mTORC1 are over-represented pathways.
+
+Instead, in DropSeq, for the MCF7 we get that Linear SVM behaves the best (97.7% accuracy), while for HCC1806 we still get that Linear SVM and SVM behave the best (95.4%).
+
+Notice that we have decided not to perform pathway analysis for the DropSeq dataset, since as a sequencing technology it is less precise than SmartSeq.
+
+When comparing the two sequencing technologies, we see that, overall, the performance of DropSeq is lower than the one of SmartSeq. This may be due to sparsity, and the fact that there may be still a lot of noise on the dataset. Moreover, notice that hypoxic/normoxic cells are not balanced here. 
+
+So overall, the best classification seems to be given by Linear SVM.
