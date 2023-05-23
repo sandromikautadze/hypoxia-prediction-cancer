@@ -84,3 +84,61 @@ Notice that we have decided not to perform pathway analysis for the DropSeq data
 When comparing the two sequencing technologies, we see that, overall, the performance of DropSeq is lower than the one of SmartSeq. This may be due to sparsity, and the fact that there may be still a lot of noise on the dataset. Moreover, notice that hypoxic/normoxic cells are not balanced here. 
 
 So overall, the best classification seems to be given by Linear SVM.
+
+## Test Results
+
+After evaluating performance and interpretability, we decided to use the following models: Linear SVM for MCF7, both SmartSeq and DropSeq, and for HCC1806 DropSeq, while we kept Random Forest for HCC1806 SmartSeq.
+
+Using the aforementioned models we checked our performance on the test sets. The results are in the form of confusion matrices, i.e.
+|        | **Predicted Negative** | **Predicted Positive** |
+|--------|--------------------|--------------------|
+| **Actual Negative** | True Negative | False Positive |
+| **Actual Positive** | False Negative | True Positive |
+
+and associated scores.
+
+HCC1806 SmartSeq:
+| | **0** | **1** |
+|-----|-----|-----|
+| **0** | 25 | 0 |
+| **1** | 1 | 19 |
+
+- Accuracy: 0.98
+- Precision: 1.0
+- Recall: 0.95
+- F1: 0.97
+
+HCC1806 DropSeq:
+| | **0** | **1** |
+|-----|-----|-----|
+| **0** | 1339 | 115 |
+| **1** | 115 | 2102 |
+
+- Accuracy: 0.94
+- Precision: 0.95
+- Recall: 0.95
+- F1: 0.95
+
+MCF7 SmartSeq:
+| | **0** | **1** |
+|-----|-----|-----|
+| **0** | 32 | 0 |
+| **1** | 0 | 31 |
+
+- Accuracy: 1.0
+- Precision: 1.0
+- Recall: 1.0
+- F1: 1.0
+
+MCF7 DropSeq:
+| | **0** | **1** |
+|-----|-----|-----|
+| **0** | 3146 | 74 |
+| **1** | 69 | 2117 |
+
+- Accuracy: 0.97
+- Precision: 0.97
+- Recall: 0.97
+- F1: 0.97
+
+So, in conclusion, we had a really good performance with all of our models, and a perfect classifier for the dataset MCF7 SmartSeq.
