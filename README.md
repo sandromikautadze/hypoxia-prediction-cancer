@@ -10,6 +10,7 @@ The project was conducted by **Group 3**: Beatrice Citterio, Irene Colombo, Giov
 * [How To Read the Project (!)](#how-to-read-the-project)
   * [Why Such a Structure?](#why-such-a-structure)
 * [Brief Comments on the Results](#brief-comments-on-the-results)
+* [Test Results](#test-results)
 
 ## Introduction
 
